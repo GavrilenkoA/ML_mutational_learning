@@ -1,0 +1,6 @@
+# Don't track content of these directories
+mutations_leaning/
+nn4dms/
+data/
+metrics_report
+metrics_report_ab_code

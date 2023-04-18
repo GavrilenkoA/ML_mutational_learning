@@ -4,3 +4,6 @@ nn4dms/
 data/
 metrics_report
 metrics_report_ab_code
+
+.vscode/
+

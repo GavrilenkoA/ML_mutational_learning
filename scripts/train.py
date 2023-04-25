@@ -2,6 +2,7 @@
 import torch
 from tqdm import tqdm
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+#device = torch.device("cpu")
 
 def training(model, criterion, optimizer, num_epochs, trainloader, testloader = None):
     loss_train_hist = []
@@ -12,7 +13,7 @@ def training(model, criterion, optimizer, num_epochs, trainloader, testloader = 
         for batch in trainloader:
             optimizer.zero_grad()
             input_embeds, labels = batch
-            #input_embeds = input_embeds.float().to(device)
+            input_embeds = input_embeds.float().to(device)
             labels = labels.unsqueeze(1).to(device)
             labels = labels.float()
             prediction = model(input_embeds)
@@ -27,7 +28,7 @@ def training(model, criterion, optimizer, num_epochs, trainloader, testloader = 
             with torch.no_grad():
                 for batch in testloader:
                     input_embeds, labels = batch
-                    #input_embeds = input_embeds.float().to(device)
+                    input_embeds = input_embeds.float().to(device)
                     labels = labels.unsqueeze(1).to(device)
                     labels = labels.float()
                     prediction = model(input_embeds)
@@ -35,3 +36,5 @@ def training(model, criterion, optimizer, num_epochs, trainloader, testloader = 
                     valid_loss += loss.item()
                 loss_valid_hist.append(valid_loss/len(testloader))
     return loss_train_hist, loss_valid_hist
+
+

@@ -24,4 +24,4 @@ def get_desc(df):
         assert item.shape == (24, 40)
     return all_features
 
-# %%
+

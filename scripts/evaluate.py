@@ -10,6 +10,7 @@ from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+#device = torch.device("cpu")
 
 def plot_loss(train_loss, valid_loss):
     df = pd.DataFrame(list(zip(train_loss, valid_loss)),

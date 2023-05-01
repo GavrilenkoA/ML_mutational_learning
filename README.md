@@ -10,8 +10,12 @@
 * Pretrain models using background antibodies and fine-tuning on few data of antibody of interest (REGN33). Compare metrics with model performance trained only on few data of antibody of interest.
 
 ##### Results:
-   accuracy    recall  precision  f1_scor       auc
-0  0.756083  0.695548   0.790864  0.74015  0.838347
+In the course of this project two models were designed:
+* RNN
+1. Trained only with data of antibody of interest
+| Attempt | #1    | #2    |
+| :-----: | :---: | :---: |
+| Seconds | 301   | 283   |
 
 
 

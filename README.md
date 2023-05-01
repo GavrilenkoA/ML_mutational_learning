@@ -44,6 +44,6 @@ b) Fine-tuning pretrained model with data of background antibodies.
 
 RNN model was selected finally. 
 Following distribution ROC-AUC metrics with 40 samples of REGN33 data. 
-![plot]('download.png')
+![image](https://user-images.githubusercontent.com/92908421/235514681-867064d8-9a41-4c0f-82be-58c550dbe373.png)
 
 

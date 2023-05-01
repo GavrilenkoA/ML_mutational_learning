@@ -27,7 +27,7 @@ b) Fine-tuning pretrained model with data of background antibodies.
 | ------------- | ------------- | ------------- | --------------| --------------|
 |0.819495       |  0.890721     | 0.790864      |0.83134        | 0.903893      |
 
-1. 1D CNN model
+2. 1D CNN model
 Belonging mutated variants to specific antibodies was as ones in corresponding position in vector.
 
 a) Trained only with data of antibody of interest (REGN33 - 100 sequences). 
@@ -41,5 +41,9 @@ b) Fine-tuning pretrained model with data of background antibodies.
 | Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
 | ------------- | ------------- | ------------- | --------------| --------------|
 | 0.724115      |   0.90395     | 0.644545      |  0.861503     | 0.861503      |
-   
+
+RNN model was selected finally. 
+Following distribution ROC-AUC metrics with 40 samples of REGN33 data. 
+![alt text]
+
 

@@ -29,6 +29,7 @@ b) Fine-tuning pretrained model with data of background antibodies.
 
 1. 1D CNN model
 Belonging mutated variants to specific antibodies was as ones in corresponding position in vector.
+
 a) Trained only with data of antibody of interest (REGN33 - 100 sequences). 
 
 | Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   

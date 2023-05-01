@@ -34,6 +34,7 @@ a) Trained only with data of antibody of interest (REGN33 - 100 sequences).
 | Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
 | ------------- | ------------- | ------------- | --------------| --------------|
 | 0.767463      |   0.726878    |0.790641       | 0.75742       | 0.853307      |
+
 b) Fine-tuning pretrained model with data of background antibodies. 
 
 | Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   

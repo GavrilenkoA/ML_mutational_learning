@@ -13,6 +13,7 @@
 In the course of this project two models were designed:
 1. RNN model
 Belonging mutated variants to specific antibodies was encoded as additional embedding.
+
 a) Trained only with data of antibody of interest (REGN33 - 100 sequences). 
 
 | Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   

@@ -19,6 +19,7 @@ Belonging mutated variants to specific antibodies was encoded as additional embe
 | ------------- | ------------- | ------------- | --------------| --------------|
 | 0.756083      |  0.695548     |0.790864       |0.74015        | 0.838347      |
 
+
 2. Fine-tuning pretrained model with data of background antibodies. 
 | Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
 | ------------- | ------------- | ------------- | --------------| --------------|

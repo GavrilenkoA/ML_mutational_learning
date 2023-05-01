@@ -12,10 +12,11 @@
 ##### Results:
 In the course of this project two models were designed:
 * RNN
-1. Trained only with data of antibody of interest
-| Attempt | #1    | #2    |
-| :-----: | :---: | :---: |
-| Seconds | 301   | 283   |
+Belonging mutated variants to specific antibodies was encoded as additional embedding.
+1. Trained only with data of antibody of interest (REGN33). 
+| Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
+| ------------- | ------------- | ------------- | --------------| --------------|
+| 0.756083      |  0.695548     |0.790864       |0.74015        | 0.838347      |
 
 
 

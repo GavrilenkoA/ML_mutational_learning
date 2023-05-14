@@ -1,9 +1,7 @@
 # Don't track content of these directories
 mutations_leaning/
 nn4dms/
-data/
-metrics_report
-metrics_report_ab_code
-
+ML_mutational_learning/dataset/test.csv.zip
+ML_mutational_learning/dataset/train.csv.zip
 .vscode/
 

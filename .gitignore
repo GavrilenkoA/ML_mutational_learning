@@ -1,7 +1,7 @@
 # Don't track content of these directories
 mutations_leaning/
 nn4dms/
-ML_mutational_learning/data/
+data/
 
 .vscode/
 

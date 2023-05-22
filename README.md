@@ -44,14 +44,13 @@ As a result of recall metrics ACE2 binding data could relevant for ly16 escape p
 | ------------- | ------------- | ------------- | --------------| --------------|
 | 0.902206  |  0.847518   |0.953457   |0.897372    | 0.959425 |
 
+
 ##### B.4) Escape prediction by LY555 antibody training RNN model using physical features.
 .
 | Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
 | ------------- | ------------- | ------------- | --------------| --------------|
 | 0.905188  |  0.868794    |0.938697   |0.902394    | 0.957798 |
 Adding physical features increase performance RNN models.
-
-
 
 
 
@@ -64,12 +63,14 @@ a) Trained only with data of antibody of interest (REGN33 - 100 sequences).
 | ------------- | ------------- | ------------- | --------------| --------------|
 | 0.756083      |  0.695548     |0.790864       |0.74015        | 0.838347      |
 
+
 b) Fine-tuning pretrained model with data of background antibodies. 
 
 
 | Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
 | ------------- | ------------- | ------------- | --------------| --------------|
 |0.819495       |  0.890721     | 0.790864      |0.83134        | 0.903893      |
+
 
 2. 1D CNN model
 Belonging mutated variants to specific antibodies was as ones in corresponding position in vector.
@@ -79,6 +80,7 @@ a) Trained only with data of antibody of interest (REGN33 - 100 sequences).
 | Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
 | ------------- | ------------- | ------------- | --------------| --------------|
 | 0.767463      |   0.726878    |0.790641       | 0.75742       | 0.853307      |
+
 
 b) Fine-tuning pretrained model with data of background antibodies. 
 

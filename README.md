@@ -20,10 +20,11 @@
 | 0.883495    |   0.886102      |   0.878951   |0.882512       | 0.94634      |
 
 ##### A.2) Escape prediction by LY16 antibody training Catboost model on ACE2 data.
-.
+
 | Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
 | ------------- | ------------- | ------------- | --------------| --------------|
 | 0.495815    |  0.970169    |0.494642      |0.65522      | 0.551635   |
+
 As a result of recall metrics ACE2 binding data could relevant for ly16 escape prediction, almost absent false negative prediction.
 
 #### B) In the course of this project two neural network models were designed: RNN и CNN.
@@ -32,26 +33,28 @@ As a result of recall metrics ACE2 binding data could relevant for ly16 escape p
 | Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
 | ------------- | ------------- | ------------- | --------------| --------------|
 | 0.902803  |  0.852246    |0.949934     |0.898442     | 0.961902 |
+
+
 ##### B.2) Escape prediction by LY555 antibody training RNN model.
-.
+
 | Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
 | ------------- | ------------- | ------------- | --------------| --------------|
 | 0.878951  |  0.853428    |0.901373    |0.876746    | 0.942996 |
 
+
 ##### B.3) Escape prediction by LY555 antibody training CNN model using physical features.
-.
+
 | Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
 | ------------- | ------------- | ------------- | --------------| --------------|
 | 0.902206  |  0.847518   |0.953457   |0.897372    | 0.959425 |
 
 ##### B.4) Escape prediction by LY555 antibody training RNN model using physical features.
-.
+
 | Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
 | ------------- | ------------- | ------------- | --------------| --------------|
 | 0.905188  |  0.868794    |0.938697   |0.902394    | 0.957798 |
+
 Adding physical features increase performance RNN models.
-
-
 
 
 
@@ -63,6 +66,7 @@ a) Trained only with data of antibody of interest (REGN33 - 100 sequences).
 | Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
 | ------------- | ------------- | ------------- | --------------| --------------|
 | 0.756083      |  0.695548     |0.790864       |0.74015        | 0.838347      |
+
 
 b) Fine-tuning pretrained model with data of background antibodies. 
 

@@ -99,5 +99,16 @@ Following distribution ROC-AUC metrics with 40 samples of REGN33 data.
 * cnn_1d.ipynb - REGN33 escape prediction train CNN using fine-tuning technique.
 * recurrent-model.ipynb - REGN33 escape prediction train RNN using fine-tuning technique.
 
+##### Scripts
+* evaluation.py - output metrics trained model on test data
+* process_data.py - convert string to np array of physical features within dataframe
+* training_nn.py - train loop function
+##### Data
+* whole_test.csv - RDB mutation sequences  test data
+* whole_train.csv - RDB mutation sequences  train data
+* Dataset with physical features can be downoloaded...
+
+
+
 
 

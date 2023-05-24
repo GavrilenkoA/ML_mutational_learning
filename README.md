@@ -110,7 +110,7 @@ Following distribution ROC-AUC metrics with 40 samples of REGN33 data.
 ##### Data
 * whole_test.csv - RDB mutation sequences  test data
 * whole_train.csv - RDB mutation sequences  train data
-* Dataset with physical features can be downoloaded...
+* Dataset with physical features can be downoloaded https://disk.yandex.ru/d/DT-lI5uehTHGYA (train) and https://disk.yandex.ru/d/nFnS3PDUDmneXg (test)
 
 
 

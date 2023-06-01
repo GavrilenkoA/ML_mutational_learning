@@ -4,4 +4,8 @@ nn4dms/
 data/
 
 .vscode/
+notebooks/catboost_info
+scripts/__pycache__
+notebooks/.ipynb_checkpoints
+.idea
 

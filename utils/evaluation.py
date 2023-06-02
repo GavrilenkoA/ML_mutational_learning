@@ -27,7 +27,7 @@ def measure_metrics(y_true, y_pred, pred_logits):
     return list((accuracy, recall, precision, f1_scor, auc))
 
 
-def evaluate_model_cnn(loader, model):
+def evaluate_model(loader, model):
     m = nn.Sigmoid()
     model.eval()
     ground_truth = []

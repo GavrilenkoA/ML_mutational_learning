@@ -1,6 +1,7 @@
-
 import numpy as np
 import re
+
+SEED = 42
 
 
 def get_desc(df):
@@ -11,7 +12,7 @@ def get_desc(df):
         ref_content = ref_pattern.findall(item)
         descr_seq = []
         for feature in ref_content:
-            arr = np.array([float(ch) for ch in re.sub(r'\[|\]|\n', "", 
+            arr = np.array([float(ch) for ch in re.sub(r'\[|\]|\n', "",
                                                        feature).split()])
             descr_seq.append(arr.reshape(1, -1))
         descr_seq = np.concatenate(descr_seq, axis=0)
@@ -21,3 +22,11 @@ def get_desc(df):
     return all_features
 
 
+def get_data(train, test, samples=200, target_ab=None):
+    target_df = train.loc[train['Antibody'] == target_ab]
+    rest_df = train.loc[train['Antibody'] != target_ab]
+    target_test = test.loc[test['Antibody'] == target_ab]
+    sample_target = target_df.sample(n=samples, random_state=SEED)
+    train_target = sample_target.iloc[:samples // 2, :]
+    valid_target = sample_target.iloc[samples // 2:, :]
+    return train_target, valid_target, target_test, rest_df

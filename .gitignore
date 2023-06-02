@@ -5,9 +5,10 @@ data/
 
 .vscode/
 notebooks/catboost_info
-scripts/__pycache__
 notebooks/.ipynb_checkpoints
 .idea
 dataset/phys_test.csv
 dataset/phys_train.csv
+dataset/.ipynb_checkpoints
+utils/__pycache__
 

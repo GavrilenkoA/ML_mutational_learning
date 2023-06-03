@@ -1,10 +1,15 @@
 import numpy as np
 import re
+import pandas as pd
+from typing import Any
 
 SEED = 42
 
 
-def get_desc(df):
+def get_desc(df: pd.DataFrame) -> list[np.ndarray]:
+    '''
+    Function for converting string to float of entries in repr columns
+    '''
     phys_embed = list(df.repr)
     ref_pattern = re.compile(r'\[ [\S\n\t\v ]*?\]')
     all_features = []
@@ -22,7 +27,8 @@ def get_desc(df):
     return all_features
 
 
-def get_data(train, test, samples=200, target_ab=None):
+def get_data(train: pd.DataFrame, test: pd.DataFrame, samples: int = 200, target_ab: str = None) -> \
+        tuple[Any, Any, Any, Any]:
     target_df = train.loc[train['Antibody'] == target_ab]
     rest_df = train.loc[train['Antibody'] != target_ab]
     target_test = test.loc[test['Antibody'] == target_ab]

@@ -7,7 +7,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 def training_rnn(model, criterion, optimizer, num_epochs, trainloader, validloader=None):
     loss_train_hist = []
     loss_valid_hist = []
-    for e in tqdm(range(num_epochs)):
+    for _ in tqdm(range(num_epochs)):
         model.train()
         train_loss = 0
         for batch in trainloader:
@@ -41,7 +41,7 @@ def training_rnn(model, criterion, optimizer, num_epochs, trainloader, validload
 def training(model, criterion, optimizer, num_epochs, trainloader, validloader=None):
     loss_train_hist = []
     loss_valid_hist = []
-    for e in tqdm(range(num_epochs)):
+    for _ in tqdm(range(num_epochs)):
         model.train()
         train_loss = 0
         for batch in trainloader:

@@ -9,16 +9,18 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
+from torch.utils.data import DataLoader
+
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
-def plot_loss(train_loss, valid_loss):
+def plot_loss(train_loss: list, valid_loss: list) -> None:
     loss_df = pd.DataFrame(list(zip(train_loss, valid_loss)), columns=['train_loss', 'valid_loss'])
     sns.lineplot(data=loss_df)
     plt.show()
 
 
-def measure_metrics(y_true, y_pred, pred_logits):
+def measure_metrics(y_true: np.ndarray, y_pred: np.ndarray, pred_logits: np.ndarray) -> list[float]:
     accuracy = accuracy_score(y_true, y_pred)
     recall = recall_score(y_true, y_pred)
     precision = precision_score(y_true, y_pred)
@@ -27,7 +29,7 @@ def measure_metrics(y_true, y_pred, pred_logits):
     return list((accuracy, recall, precision, f1_scor, auc))
 
 
-def evaluate_model(loader, model):
+def evaluate_model(loader: DataLoader, model: nn.Module) -> pd.DataFrame:
     m = nn.Sigmoid()
     model.eval()
     ground_truth = []
@@ -51,11 +53,11 @@ def evaluate_model(loader, model):
     all_predict = np.concatenate(all_predict)
     metrics = measure_metrics(ground_truth, all_predict, all_prob)
     columns = ['accuracy', 'recall', 'precision', 'f1_scor', 'auc']
-    metrics = pd.DataFrame(dict(zip(columns, metrics)), index = [0])
+    metrics = pd.DataFrame(dict(zip(columns, metrics)), index=[0])
     return metrics
 
 
-def evaluate_model_rnn(loader, model):
+def evaluate_model_rnn(loader: DataLoader, model: nn.Module) -> pd.DataFrame:
     m = nn.Sigmoid()
     model.eval()
     ground_truth = []
@@ -79,9 +81,5 @@ def evaluate_model_rnn(loader, model):
     all_predict = np.concatenate(all_predict)
     metrics = measure_metrics(ground_truth, all_predict, all_prob)
     columns = ['accuracy', 'recall', 'precision', 'f1_scor', 'auc']
-    metrics = pd.DataFrame(dict(zip(columns, metrics)), index = [0])
+    metrics = pd.DataFrame(dict(zip(columns, metrics)), index=[0])
     return metrics
-
-
-
-

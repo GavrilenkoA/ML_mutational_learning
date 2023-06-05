@@ -1,4 +1,8 @@
 ### Antibody escape prediction of mutated SARS-CoV-2 variants.
+Authors:
+
+Alexander Gavrilenko
+Daria Balashova
 
 **Problem statement:**
 
@@ -10,7 +14,7 @@ Detailed molecular analysis has revealed that many neutralizing antibodies to SA
 
 In this part of project I implemented fine-tuning approach adding a feature to the RBD sequence with which antibody it interacts. Fine-tuning model used for prediction of binding by therapeutic antibody REGN33.
 
-**Install** **Requirements:**
+**Usage**
 
 Create, activate a virtual environment and install needed libraries.
 

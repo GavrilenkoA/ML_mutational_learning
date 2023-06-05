@@ -101,6 +101,8 @@ Training RNN model consists of two stages:
 1. Pre-training using background antibododies. Freeze weights of recurrent block.
 2. Fine-tuning using limited data of REGN33 antibody.
 
+Base model trained using only REGN33 limited data.
+
 RNN model performance using combined data.
 
 

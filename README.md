@@ -110,7 +110,7 @@ RNN model performance using combined data.
 
 
 
-Then I provided 40 experiments, sampling different random 100 RBD sequences neutralized by REGN33 antibodies for fine-tuning and compared performance of base model and fine-tuning model, using paired T-test.
+Then I provided 40 experiments, sampling different random 100 RBD sequences neutralized by REGN33 antibody for fine-tuning and compared performance of base model and fine-tuning model, using paired T-test.
 
 ![image](https://github.com/GavrilenkoA/ML_mutational_learning/assets/92908421/8344ce73-e615-4f85-91b9-c0924f836953)
 

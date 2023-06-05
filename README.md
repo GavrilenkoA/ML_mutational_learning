@@ -117,6 +117,8 @@ Training RNN model consists of two stages:
 2. fine tuning for prediction of REGN33 antibody escape.
 
 RNN model performance on combined data.
+
+
 ![image](https://github.com/GavrilenkoA/ML_mutational_learning/assets/92908421/a9dee58e-127f-4e87-afcf-511fc40ff9cf)
 
 

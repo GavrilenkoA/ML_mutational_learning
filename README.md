@@ -58,57 +58,57 @@ Datasets:
 
 process_data.py:
 
-get_desc - function for converting string to float of one-hot and phisycal features
+*get_desc* - function for converting string to float of one-hot and phisycal features
 
-get_data  - Limited data sample of the antibody of interest and full data background antibodies
+*get_data*  - Limited data sample of the antibody of interest and full data background antibodies
 
 training_nn.py:
 
-training_rnn - trained RNN with embedded antibody data
+*training_rnn* - trained RNN with embedded antibody data
 
-training - Trained models are used with pre-embedded data
+*training* - Trained models are used with pre-embedded data
 
 evaluation.py:
 
-plot_loss - print plot validation and training loss
+*plot_loss* - print plot validation and training loss
 
-measure_metrics - calculate all classification metrics
+*measure_metrics* - calculate all classification metrics
 
-evaluate_model  - calculates model metrics on embedded antibody test data
+*evaluate_model*  - calculates model metrics on embedded antibody test data
 
-evaluate_model_rnn  - calculates model metrics on pre-embedded antibody test data
+*evaluate_model_rnn*  - calculates model metrics on pre-embedded antibody test data
 
 models.py:
 
-CNN - 1d convolution neural network process sequential data 
+*CNN* - 1d convolution neural network process sequential data 
 
-RNN - recurrent neural network process already embedded sequence
+*RNN* - recurrent neural network process already embedded sequence
 
-RNNembed - recurrent neural that generate embedding of type antibody or ACE2 protein and process RBD sequence
+*RNNembed* - recurrent neural that generate embedding of type antibody or ACE2 protein and process RBD sequence
 
 dataset.py Pytorch datasets:
 
-Onehot - one-hot encoded RBD sequence dataset
+*Onehot* - one-hot encoded RBD sequence dataset
 
-OnehotandAB -  dataset contains a one-hot encoded RBD sequence and the flagged type of antibody
+*OnehotandAB* -  dataset contains a one-hot encoded RBD sequence and the flagged type of antibody
 
-Phys - dataset represents the physical and one-hot features of the RBD sequence.
+*Phys* - dataset represents the physical and one-hot features of the RBD sequence.
 
-Abencode1 - dataset generates a special vector for antibody types.
+*Abencode1* - dataset generates a special vector for antibody types.
 
-Abencode2  - dataset generates a special number for each antibody type.
+*Abencode2* - dataset generates a special number for each antibody type.
 
 **Notebooks:**
 
-clas_ML.ipynb - EDA, train boosting classifiers for antibody escape prediction
+*clas_ML.ipynb* - EDA, train boosting classifiers for antibody escape prediction
 
-DL_full_df.ipynb - train neural networks with full data of RBD variants.
+*DL_full_df.ipynb* - train neural networks with full data of RBD variants.
 
-limit_data.ipynb - train neural networks with limited data of REGN33 data
+*limit_data.ipynb* - train neural networks with limited data of REGN33 data
 
-CNN_tr_learn.ipynb - fine-tuning of CNN model using limited data of REGN 33 
+*CNN_tr_learn.ipynb* - fine-tuning of CNN model using limited data of REGN 33 
 
-RNN_tr_learn.ipynb - fine-tuning of RNN model using limited data of REGN 33 
+*RNN_tr_learn.ipynb* - fine-tuning of RNN model using limited data of REGN 33 
 
 **Results:**
 

@@ -115,14 +115,12 @@ RNN_tr_learn.ipynb - fine-tuning of RNN model using limited data of REGN 33
 Training RNN model consists of two stages - pre-training using background antibododies and fine tuning for prediction of REGN33 antibody escape.
 
 RNN model performance on combined data.
-| LY16 (train)     | REGN87 (train)       | LY555 (train)     | REGN33 (train/val)      | ROC AUC (REGN33 test, 13357 sequences)  |   
-|------------------| ---------------------|---- ------------- |-------------------------|-----------------------------------------|
-| 0.883495    |   0.886102      |   0.878951   |0.882512       | 0.94634      |
+![image](https://github.com/GavrilenkoA/ML_mutational_learning/assets/92908421/1c1f9f0c-88a4-49bd-a487-cda800ec3bb2)
 
 
-Then we provide 40 experiments, sampling different random 100 RBD sequences neutralized by REGN33 antibodies for fine-tuning and compare performance of base model and fine-tuning model, using paired T-test.
+Then I provide 40 experiments, sampling different random 100 RBD sequences neutralized by REGN33 antibodies for fine-tuning and compare performance of base model and fine-tuning model, using paired T-test.
 
-![Untitled](README%20c7169c170998443d95ed9502035a41e4/Untitled.png)
+![image](https://github.com/GavrilenkoA/ML_mutational_learning/assets/92908421/8344ce73-e615-4f85-91b9-c0924f836953)
 
 
 

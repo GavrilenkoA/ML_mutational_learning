@@ -114,8 +114,12 @@ Then I provided 40 experiments, sampling different random 100 RBD sequences neut
 
 It can be seen, the fine-tuned model demonstrates more accurate and stable predictions.
 
+Our group tried other machine learning methods too. The results and code can be found here https://github.com/grigorievaekaterina/BI_antibodies_project/tree/main
+
 #### Conclusion: 
 Therapeutic antibodies share similar features - they target the conserved epitopes on RBD and mutations in the same manner reflected by binding RBD.
 They can be used as a data source for pre-training ML models for prediction antibody escape with limited labeled data of antibody of interest.
 
-
+#### References:
+Taft, J. M., Weber, C. R., Gao, B., Ehling, R. A., Han, J., Frei, L., Metcalfe, S. W., Overath, M. D., Yermanos, A., Kelton, W., & Reddy, S. T. (2022). Deep mutational learning predicts ACE2 binding and antibody escape to combinatorial mutations in the SARS-CoV-2 receptor-binding domain. Cell, 185(21), 4008–4022.e14. https://doi.org/10.1016/j.cell.2022.08.024
+Li G, Du X, Li X, Zou L, Zhang G, Wu Z. Prediction of DNA binding proteins using local features and long-term dependencies with primary sequences based on deep learning. PeerJ. 2021 May 3;9:e11262. doi: 10.7717/peerj.11262. PMID: 33986992; PMCID: PMC8101451.

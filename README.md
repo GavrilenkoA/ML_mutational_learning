@@ -103,7 +103,7 @@ Training RNN model consists of two stages:
 
 Base model trained using only REGN33 limited data.
 
-RNN model performance using combined data.
+RNN model performance using combined data of four antibodies:
 
 
 ![image](https://github.com/GavrilenkoA/ML_mutational_learning/assets/92908421/a9dee58e-127f-4e87-afcf-511fc40ff9cf)

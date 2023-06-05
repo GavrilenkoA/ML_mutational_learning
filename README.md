@@ -42,23 +42,23 @@ phys_test: [https://disk.yandex.ru/d/hXVJLFn4iyWztw](https://disk.yandex.ru/d/hX
 
 **Data description:**
 
-‘Label’ column: 1 - RBD is interacted with antibody, 0 - not.
+  ‘Label’ column: 1 - RBD is interacted with antibody, 0 - not.
 
-‘Antibody’ column: type of therapeutic antibody or ACE2 protein.
+  ‘Antibody’ column: type of therapeutic antibody or ACE2 protein.
 
-Datasets:
+  Datasets:
 
-../dataset/phys_train.csv
+    ../dataset/phys_train.csv
 
-../dataset/phys_test.csv   
+    ../dataset/phys_test.csv   
 
-‘repr’ columns: Every aminoacid in the sequence one-hot encoded and has twenty biochemical and physical features extracted from aaindex database  [https://www.genome.jp/aaindex/](https://www.genome.jp/aaindex/)
+    ‘repr’ columns: Every aminoacid in the sequence one-hot encoded and has twenty biochemical and physical features extracted from aaindex                 database  [https://www.genome.jp/aaindex/](https://www.genome.jp/aaindex/)
 
-../dataset/whole_test.csv   
+    ../dataset/whole_test.csv   
 
-../dataset/whole_train.csv
+    ../dataset/whole_train.csv
 
-‘junction_aa’ column: RBD mutation sequences interacted with four therapeutic antibodies and ACE2 protein
+    ‘junction_aa’ column: RBD mutation sequences interacted with four therapeutic antibodies and ACE2 protein
 
 **Utils module**
 
@@ -129,12 +129,15 @@ RNN model performance on combined data.
 
 
 
-Then I provide 40 experiments, sampling different random 100 RBD sequences neutralized by REGN33 antibodies for fine-tuning and compare performance of base model and fine-tuning model, using paired T-test.
+Then I provided 40 experiments, sampling different random 100 RBD sequences neutralized by REGN33 antibodies for fine-tuning and compared performance of base model and fine-tuning model, using paired T-test.
 
 ![image](https://github.com/GavrilenkoA/ML_mutational_learning/assets/92908421/8344ce73-e615-4f85-91b9-c0924f836953)
 
+It can be seen, the fine-tuned model demonstrates more accurate and stable predictions.
+
 #### Conclusion: 
-Therapeutic antibodies share similar features - they target the conserved epitopes on RBD and mutations in the same manner reflected by binding RBD and can be used as a data source for pre-training ML models for prediction antibody escape with limited labeled data of antibody of interest.
+Therapeutic antibodies share similar features - they target the conserved epitopes on RBD and mutations in the same manner reflected by binding RBD.
+They can be used as a data source for pre-training ML models for prediction antibody escape with limited labeled data of antibody of interest.
 
 
 

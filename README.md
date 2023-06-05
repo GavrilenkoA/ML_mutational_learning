@@ -121,7 +121,7 @@ RNN model performance on combined data.
 Then I provide 40 experiments, sampling different random 100 RBD sequences neutralized by REGN33 antibodies for fine-tuning and compare performance of base model and fine-tuning model, using paired T-test.
 
 ![image](https://github.com/GavrilenkoA/ML_mutational_learning/assets/92908421/8344ce73-e615-4f85-91b9-c0924f836953)
-
+Conclusion: therapeutic antibodies share similar features - they target the conserved epitopes on RBD and mutations in the same manner reflected by binding RBD and can be used as a data source for training ML models for prediction antibody escape with limited label train data.
 
 
 

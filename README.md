@@ -42,7 +42,7 @@ phys_test: [https://disk.yandex.ru/d/hXVJLFn4iyWztw](https://disk.yandex.ru/d/hX
 
 **Data description:**
 
- ‘Label’ column: 1 - RBD is interacted with antibody, 0 - not.
+ ‘Label’ column: labels corresponding to whether the antibody binds this variant of RBD or not
 
   ‘Antibody’ column: type of therapeutic antibody or ACE2 protein.
 

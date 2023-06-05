@@ -54,6 +54,7 @@ phys_test: [https://disk.yandex.ru/d/hXVJLFn4iyWztw](https://disk.yandex.ru/d/hX
    ../dataset/phys_test.csv   
 
    ‘repr’ columns: Every aminoacid in the sequence one-hot encoded and has twenty biochemical and physical features extracted from aaindex                 database  [https://www.genome.jp/aaindex/](https://www.genome.jp/aaindex/)
+   
    2. Just RBD sequences strings 
 
    ../dataset/whole_test.csv   

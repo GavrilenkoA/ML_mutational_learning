@@ -123,4 +123,3 @@ They can be used as a data source for pre-training ML models for prediction anti
 #### References:
 Taft, J. M., Weber, C. R., Gao, B., Ehling, R. A., Han, J., Frei, L., Metcalfe, S. W., Overath, M. D., Yermanos, A., Kelton, W., & Reddy, S. T. (2022). Deep mutational learning predicts ACE2 binding and antibody escape to combinatorial mutations in the SARS-CoV-2 receptor-binding domain. Cell, 185(21), 4008–4022.e14. https://doi.org/10.1016/j.cell.2022.08.024
 
-Li G, Du X, Li X, Zou L, Zhang G, Wu Z. Prediction of DNA binding proteins using local features and long-term dependencies with primary sequences based on deep learning. PeerJ. 2021 May 3;9:e11262. doi: 10.7717/peerj.11262. PMID: 33986992; PMCID: PMC8101451.

@@ -68,9 +68,9 @@ __process_data.py:__
 
 *get_data*  - Limited data sample of the antibody of interest and full data background antibodies
 
-__training_nn.py:__
 
-[Link to code file](./utils/training_nn.py) - trained RNN with embedded antibody data
+
+[training_nn.py](./utils/training_nn.py) - trained RNN with embedded antibody data
 
 *training* - Trained models are used with pre-embedded data
 

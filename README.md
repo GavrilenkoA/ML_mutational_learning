@@ -75,21 +75,28 @@ phys_test: [https://disk.yandex.ru/d/hXVJLFn4iyWztw](https://disk.yandex.ru/d/hX
 
 **Notebooks:**
 
-*clas_ML.ipynb* - EDA, train boosting classifiers for antibody escape prediction by REGN33.
+[clas_ML.ipynb](./notebooks/clas_ML.ipynb) EDA, training boosting classifiers for antibody escape prediction by REGN33.
 
-*DL_full_df.ipynb* - train neural networks with full data of REGN33.
+[DL_full_df.ipynb](./notebooks/DL_full_df.ipynb) training neural networks with full data of REGN33.
 
-*limit_data.ipynb* - train neural networks with limited data of REGN33.
+[limit_data.ipynb](./notebooks/limit_data.ipynb) training neural networks with limited data of REGN33.
 
-*CNN_tr_learn.ipynb* - fine-tuning of CNN model using limited data of REGN33.
+[CNN_tr_learn.ipynb](./notebooks/CNN_tr_learn.ipynb) fine-tuning of CNN model using limited data of REGN33.
 
-*RNN_tr_learn.ipynb* - fine-tuning of RNN model using limited data of REGN33. 
+[RNN_tr_learn.ipynb](./notebooks/RNN_tr_learn.ipynb) fine-tuning of RNN model using limited data of REGN33. 
 
 **Results:**
 
+An RNN model typically consists of two main components: the recurrent block and the linear block.
+The recurrent block is composed of identical architecture cells that take the current token in the sequence and an information vector from previous cells as input. This allows the RNN to process each amino acid in the protein sequence sequentially. The output of the recurrent block provides a useful representation of the entire RBD sequence, which is then fed into the linear block for classifying antibody escape.
+
+![image](https://github.com/GavrilenkoA/ML_mutational_learning/assets/92908421/c49e34b6-6d58-49d5-be58-638f0b49347a)
+
+
+
 Training RNN model consists of two stages:
-1. pre-training using background antibododies
-2. fine tuning for prediction of REGN33 antibody escape.
+1. Pre-training using background antibododies
+2. Fine tuning using limited data of REGN33 antibody.
 
 RNN model performance on combined data.
 

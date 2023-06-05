@@ -10,7 +10,7 @@ Since the origin of SARS-Cov2, there has been enough data on RBD variants and th
 
 Machine learning models may be used for predictive profiling on current and prospective variants RBD guide the development of therapeutic antibody treatments and vaccines for COVID-19.
 
-Detailed molecular analysis has revealed that many neutralizing antibodies to SARS-CoV-2 share sequence and structural features. [Joseph M. Taft](https://www.sciencedirect.com/science/article/pii/S0092867422011199?via%3Dihub) It can be used as a additional data source for pretraining machine learning models for prediction binding RBD with limited labeled data of the antibody of interest. 
+Detailed molecular analysis has revealed that many neutralizing antibodies to SARS-CoV-2 share sequence and structural features [Joseph M. Taft](https://www.sciencedirect.com/science/article/pii/S0092867422011199?via%3Dihub). It can be used as a additional data source for pretraining machine learning models for prediction binding RBD with limited labeled data of the antibody of interest. 
 
 In this part of project I implemented fine-tuning approach adding a feature to the RBD sequence with which antibody it interacts. Fine-tuning model used for prediction of binding by therapeutic antibody REGN33.
 

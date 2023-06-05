@@ -91,7 +91,7 @@ phys_test: [https://disk.yandex.ru/d/hXVJLFn4iyWztw](https://disk.yandex.ru/d/hX
 **Results:**
 
 An RNN model typically consists of two main components: the recurrent block and the linear block.
-The recurrent block is composed of identical architecture cells that take the current token in the sequence and an information vector from previous cells as input. This allows the RNN to process each amino acid in the protein sequence sequentially. The output of the recurrent block provides a useful representation of the entire RBD sequence, which is then fed into the linear block for classifying antibody escape.
+The recurrent block is composed of identical architecture cells that take the current token in the sequence and an information vector from previous cells as input. This allows the RNN to process each amino acid in the protein sequence sequentially. The output of the recurrent block provides a useful representation of the entire RBD mutation sequence, which is then fed into the linear block for classifying antibody escape.
 
 ![image](https://github.com/GavrilenkoA/ML_mutational_learning/assets/92908421/c49e34b6-6d58-49d5-be58-638f0b49347a)
 

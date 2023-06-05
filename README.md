@@ -99,7 +99,7 @@ The recurrent block is composed of identical architecture cells that take the cu
 
 Training RNN model consists of two stages:
 1. Pre-training using background antibododies. Freeze weights of recurrent block.
-2. Fine tuning using limited data of REGN33 antibody.
+2. Fine-tuning using limited data of REGN33 antibody.
 
 RNN model performance using combined data.
 

@@ -24,7 +24,7 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
-**Load additional data** 
+**Additional data** 
 
 Load datasets of RBD sequences with physical features
 
@@ -70,7 +70,7 @@ __process_data.py:__
 
 __training_nn.py:__
 
-*training_rnn* - trained RNN with embedded antibody data
+[!notebooks/clas_ML.ipynb] - trained RNN with embedded antibody data
 
 *training* - Trained models are used with pre-embedded data
 

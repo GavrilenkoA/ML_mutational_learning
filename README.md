@@ -34,7 +34,7 @@ In a root directory:
 mv dataset
 ```
 
-click to the links and download two files:
+Click to the links and download two files:
 
 phys_train: [https://disk.yandex.ru/d/PlJgrISLlixYzA](https://disk.yandex.ru/d/PlJgrISLlixYzA)
 
@@ -49,17 +49,14 @@ phys_test: [https://disk.yandex.ru/d/hXVJLFn4iyWztw](https://disk.yandex.ru/d/hX
   Datasets:
   1. Already one-hot encoded RBD sequences and having physico-chemical features:
 
-   [phys_train.csv](./dataset/phys_train.csv)
+   [phys_train.csv](./dataset/phys_train.csv) [phys_test.csv](./dataset/phys_test.csv)
 
-   [phys_test.csv](./dataset/phys_test.csv)
-
-   ‘repr’ columns: Every aminoacid in the sequence one-hot encoded and has twenty biochemical and physical features extracted from aaindex                 database  [https://www.genome.jp/aaindex/](https://www.genome.jp/aaindex/)
+    ‘repr’ columns: Every aminoacid in the sequence one-hot encoded and has twenty biochemical and physical features extracted from aaindex                 database  [https://www.genome.jp/aaindex/](https://www.genome.jp/aaindex/)
    
    2. Just RBD sequences strings 
-    [whole_train.csv](./dataset/whole_train.csv)
-    [whole_test.csv](./dataset/whole_test.csv)
+    [whole_train.csv](./dataset/whole_train.csv) [whole_test.csv](./dataset/whole_test.csv)
 
-   ‘junction_aa’ column: RBD mutation sequences interacted with four therapeutic antibodies and ACE2 protein
+     ‘junction_aa’ column: RBD mutation sequences interacted with four therapeutic antibodies and ACE2 protein
 
 **Utils module**
 

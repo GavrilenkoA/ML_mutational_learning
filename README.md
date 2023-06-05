@@ -140,4 +140,3 @@ Therapeutic antibodies share similar features - they target the conserved epitop
 They can be used as a data source for pre-training ML models for prediction antibody escape with limited labeled data of antibody of interest.
 
 
-

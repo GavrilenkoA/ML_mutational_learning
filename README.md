@@ -42,23 +42,23 @@ phys_test: [https://disk.yandex.ru/d/hXVJLFn4iyWztw](https://disk.yandex.ru/d/hX
 
 **Data description:**
 
-  ‘Label’ column: 1 - RBD is interacted with antibody, 0 - not.
+ ‘Label’ column: 1 - RBD is interacted with antibody, 0 - not.
 
   ‘Antibody’ column: type of therapeutic antibody or ACE2 protein.
 
   Datasets:
 
-    ../dataset/phys_train.csv
+   ../dataset/phys_train.csv
 
-    ../dataset/phys_test.csv   
+   ../dataset/phys_test.csv   
 
-    ‘repr’ columns: Every aminoacid in the sequence one-hot encoded and has twenty biochemical and physical features extracted from aaindex                 database  [https://www.genome.jp/aaindex/](https://www.genome.jp/aaindex/)
+   ‘repr’ columns: Every aminoacid in the sequence one-hot encoded and has twenty biochemical and physical features extracted from aaindex                 database  [https://www.genome.jp/aaindex/](https://www.genome.jp/aaindex/)
 
-    ../dataset/whole_test.csv   
+   ../dataset/whole_test.csv   
 
-    ../dataset/whole_train.csv
+   ../dataset/whole_train.csv
 
-    ‘junction_aa’ column: RBD mutation sequences interacted with four therapeutic antibodies and ACE2 protein
+   ‘junction_aa’ column: RBD mutation sequences interacted with four therapeutic antibodies and ACE2 protein
 
 **Utils module**
 

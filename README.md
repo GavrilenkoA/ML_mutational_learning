@@ -12,9 +12,11 @@ In this part of project I implemented fine-tuning approach adding a feature to t
 
 **Install** **Requirements:**
 
-Create and activate a virtual environment
+Create, activate a virtual environment and install needed libraries.
 
 ```bash
+python3.10 -m venv <virtual-environment-name>
+source env/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -100,15 +102,15 @@ dataset.py Pytorch datasets:
 
 **Notebooks:**
 
-*clas_ML.ipynb* - EDA, train boosting classifiers for antibody escape prediction by REGN33
+*clas_ML.ipynb* - EDA, train boosting classifiers for antibody escape prediction by REGN33.
 
-*DL_full_df.ipynb* - train neural networks with full data of REGN33 data.
+*DL_full_df.ipynb* - train neural networks with full data of REGN33.
 
-*limit_data.ipynb* - train neural networks with limited data of REGN33 data
+*limit_data.ipynb* - train neural networks with limited data of REGN33.
 
-*CNN_tr_learn.ipynb* - fine-tuning of CNN model using limited data of REGN 33 
+*CNN_tr_learn.ipynb* - fine-tuning of CNN model using limited data of REGN33.
 
-*RNN_tr_learn.ipynb* - fine-tuning of RNN model using limited data of REGN 33 
+*RNN_tr_learn.ipynb* - fine-tuning of RNN model using limited data of REGN33. 
 
 **Results:**
 

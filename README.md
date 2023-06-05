@@ -1,117 +1,136 @@
 ### Antibody escape prediction of mutated SARS-CoV-2 variants.
-***
-#### Purpose and objectives of the project
 
-##### Purpose:
-* Develop an algorithm which can perform better in condition with few data of mutated variants RBD using fine-tuning technique.
-##### Objectives:
-* Reproduce the article https://doi.org/10.1101/2021.12.07.471580 - classification antibody escape (only LY16 antibody data) using CatBoost and RandomForest models.
-* Add physical features to RBD mutation protein sequences and merge the data of mutated SARS-CoV-2 variants neutralyzing by four antibodies into one dataset.
-* Train models process sequential data: Recurrent and Convolution neural networks.
-* Pretrain models using background antibodies and fine-tuning on few data of antibody of interest (REGN33). Compare metrics with model performance trained only on few data of antibody of interest.
+**Problem statement:**
 
-### Results:
-#### A) Learning classical ML models using data one antibody separately.
-##### A.1) Escape prediction by LY16 antibody training Random forest model.
-.
+Since the origin of SARS-Cov2, there has been enough data on RBD variants and their effect on the immune system - whether antibodies bind this variant of RBD or not (binary classification problem).
 
-| Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
-| ------------- | ------------- | ------------- | --------------| --------------|
-| 0.883495    |   0.886102      |   0.878951   |0.882512       | 0.94634      |
+Machine learning models may be used for predictive profiling on current and prospective variants RBD guide the development of therapeutic antibody treatments and vaccines for COVID-19.
 
-##### A.2) Escape prediction by LY16 antibody training Catboost model on ACE2 data.
+Detailed molecular analysis has revealed that many neutralizing antibodies to SARS-CoV-2 share sequence and structural features. In can be used as a additional data source for pretraining machine learning models for prediction binding RBD with limited labeled data of the antibody of interest. 
 
-| Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
-| ------------- | ------------- | ------------- | --------------| --------------|
-| 0.495815    |  0.970169    |0.494642      |0.65522      | 0.551635   |
+In this part of project I implemented fine-tuning approach adding a feature to the RBD sequence with which antibody it interacts. Fine-tuning model used for prediction of binding by therapeutic antibody REGN33.
 
-As a result of recall metrics ACE2 binding data could relevant for ly16 escape prediction, almost absent false negative prediction.
+**Install** **Requirements:**
 
-#### B) In the course of this project two neural network models were designed: RNN и CNN.
-##### B.1) Escape prediction by LY555 antibody training CNN model.
-.
-| Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
-| ------------- | ------------- | ------------- | --------------| --------------|
-| 0.902803  |  0.852246    |0.949934     |0.898442     | 0.961902 |
+create and activate a virtual environment
 
+```bash
+pip install -r requirements.txt
+```
 
-##### B.2) Escape prediction by LY555 antibody training RNN model.
+**Load additional data** 
 
-| Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
-| ------------- | ------------- | ------------- | --------------| --------------|
-| 0.878951  |  0.853428    |0.901373    |0.876746    | 0.942996 |
+Load datasets of RBD sequences with physical features
 
+In a root directory:
 
-##### B.3) Escape prediction by LY555 antibody training CNN model using physical features.
+```bash
+mv dataset
+```
 
-| Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
-| ------------- | ------------- | ------------- | --------------| --------------|
-| 0.902206  |  0.847518   |0.953457   |0.897372    | 0.959425 |
+click to link and download two files:
 
-##### B.4) Escape prediction by LY555 antibody training RNN model using physical features.
+phys_train: [https://disk.yandex.ru/d/PlJgrISLlixYzA](https://disk.yandex.ru/d/PlJgrISLlixYzA)
 
-| Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
-| ------------- | ------------- | ------------- | --------------| --------------|
-| 0.905188  |  0.868794    |0.938697   |0.902394    | 0.957798 |
+phys_test: [https://disk.yandex.ru/d/hXVJLFn4iyWztw](https://disk.yandex.ru/d/hXVJLFn4iyWztw)
 
-Adding physical features increase performance RNN models.
+**Data description:**
 
+‘Label’ column: 1 - RBD is interacted with antibody, 0 - not.
 
+‘Antibody’ column: type of therapeutic antibody or ACE2 protein.
 
-#### C) Training DL model with limited labeled train data.
-Belonging mutated variants to specific antibodies was encoded as additional embedding.
+Datasets:
 
-a) Trained only with data of antibody of interest (REGN33 - 100 sequences). 
+../dataset/phys_train.csv
 
-| Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
-| ------------- | ------------- | ------------- | --------------| --------------|
-| 0.756083      |  0.695548     |0.790864       |0.74015        | 0.838347      |
+../dataset/phys_test.csv   
 
+‘repr’ columns: Every aminoacid in the sequence one-hot encoded and has twenty biochemical and physical features extracted from aaindex database  [https://www.genome.jp/aaindex/](https://www.genome.jp/aaindex/)
 
-b) Fine-tuning pretrained model with data of background antibodies. 
+../dataset/whole_test.csv   
 
+../dataset/whole_train.csv
 
-| Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
-| ------------- | ------------- | ------------- | --------------| --------------|
-|0.819495       |  0.890721     | 0.790864      |0.83134        | 0.903893      |
+‘junction_aa’ column: RBD mutation sequences interacted with four therapeutic antibodies and ACE2 protein
 
-2. 1D CNN model
-Belonging mutated variants to specific antibodies was as ones in corresponding position in vector.
+**Utils module**
 
-a) Trained only with data of antibody of interest (REGN33 - 100 sequences). 
+process_data.py:
 
-| Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
-| ------------- | ------------- | ------------- | --------------| --------------|
-| 0.767463      |   0.726878    |0.790641       | 0.75742       | 0.853307      |
+get_desc - function for converting string to float of one-hot and phisycal features
 
-b) Fine-tuning pretrained model with data of background antibodies. 
+get_data  - Limited data sample of the antibody of interest and full data background antibodies
 
-| Accuracy      | Recall        | Precision     | F1-Score      | ROC-AUC       |   
-| ------------- | ------------- | ------------- | --------------| --------------|
-| 0.724115      |   0.90395     | 0.644545      |  0.861503     | 0.861503      |
+training_nn.py:
 
-RNN model was selected finally. 
-Following distribution ROC-AUC metrics with 40 samples of REGN33 data. 
-![image](https://user-images.githubusercontent.com/92908421/235514681-867064d8-9a41-4c0f-82be-58c550dbe373.png)
+training_rnn - trained RNN with embedded antibody data
 
-#### Workflow overview
-##### Notebooks
+training - Trained models are used with pre-embedded data
 
-* single_onehot.ipynb - LY16 escape prediction training Catboost and Random Forest models.
-* DL_full_df.ipynb - LY555 escape prediction training RNN and CNN models.
-* limit_data.ipynb - REGN33 escape prediction using limit train data using physical features.
-* cnn_1d.ipynb - REGN33 escape prediction train CNN using fine-tuning technique.
-* recurrent-model.ipynb - REGN33 escape prediction train RNN using fine-tuning technique.
+evaluation.py:
 
-##### Scripts
-* evaluation.py - output metrics trained model on test data
-* process_data.py - convert string to np array of physical features within dataframe
-* training_nn.py - train loop function
-##### Data
-* whole_test.csv - RDB mutation sequences  test data
-* whole_train.csv - RDB mutation sequences  train data
-* Dataset with physical features can be downoloaded https://disk.yandex.ru/d/DT-lI5uehTHGYA (train) and https://disk.yandex.ru/d/nFnS3PDUDmneXg (test)
+plot_loss - print plot validation and training loss
 
+measure_metrics - calculate all classification metrics
+
+evaluate_model  - calculates model metrics on embedded antibody test data
+
+evaluate_model_rnn  - calculates model metrics on pre-embedded antibody test data
+
+models.py:
+
+CNN - 1d convolution neural network process sequential data 
+
+RNN - recurrent neural network process already embedded sequence
+
+RNNembed - recurrent neural that generate embedding of type antibody or ACE2 protein and process RBD sequence
+
+dataset.py Pytorch datasets:
+
+Onehot - one-hot encoded RBD sequence dataset
+
+OnehotandAB -  dataset contains a one-hot encoded RBD sequence and the flagged type of antibody
+
+Phys - dataset represents the physical and one-hot features of the RBD sequence.
+
+Abencode1 - dataset generates a special vector for antibody types.
+
+Abencode2  - dataset generates a special number for each antibody type.
+
+**Notebooks:**
+
+clas_ML.ipynb - EDA, train boosting classifiers for antibody escape prediction
+
+DL_full_df.ipynb - train neural networks with full data of RBD variants.
+
+limit_data.ipynb - train neural networks with limited data of REGN33 data
+
+CNN_tr_learn.ipynb - fine-tuning of CNN model using limited data of REGN 33 
+
+RNN_tr_learn.ipynb - fine-tuning of RNN model using limited data of REGN 33 
+
+**Results:**
+
+Training RNN model consists of two stages - pre-training using background antibododies and fine tuning for prediction of REGN33 antibody escape.
+
+RNN model performance on combined data.
+
+|  | LY16 (train)
+seq | REGN87 (train)
+seq | LY555 (train)
+seq | REGN33 (train/val)
+seq 100 | ROC AUC (REGN33 test, 13357 sequences) |
+| --- | --- | --- | --- | --- | --- |
+| base |  |  |  | 100/100 | 0.855 |
+| pre-
+training | 26880 | 30089 | 15087 | -/100 | 0.722 |
+| fine-
+tuning |  |  |  | 100/100 | 0.921 |
+
+Then we provide 40 experiments, sampling different random 100 RBD sequences neutralized by REGN33 antibodies for fine-tuning and compare performance of base model and fine-tuning model, using paired T-test.
+
+![Untitled](README%20c7169c170998443d95ed9502035a41e4/Untitled.png)
 
 
 

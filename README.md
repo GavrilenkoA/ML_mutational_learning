@@ -58,19 +58,19 @@ Datasets:
 
 **Utils module**
 
-process_data.py:
+__process_data.py:__
 
 *get_desc* - function for converting string to float of one-hot and phisycal features
 
 *get_data*  - Limited data sample of the antibody of interest and full data background antibodies
 
-training_nn.py:
+__training_nn.py:__
 
 *training_rnn* - trained RNN with embedded antibody data
 
 *training* - Trained models are used with pre-embedded data
 
-evaluation.py:
+__evaluation.py:__
 
 *plot_loss* - print plot validation and training loss
 
@@ -80,7 +80,7 @@ evaluation.py:
 
 *evaluate_model_rnn*  - calculates model metrics on pre-embedded antibody test data
 
-models.py:
+__models.py:__
 
 *CNN* - 1d convolution neural network process sequential data 
 
@@ -88,7 +88,7 @@ models.py:
 
 *RNNembed* - recurrent neural that generate embedding of type antibody or ACE2 protein and process RBD sequence
 
-dataset.py Pytorch datasets:
+__dataset.py Pytorch datasets:__
 
 *Onehot* - one-hot encoded RBD sequence dataset
 

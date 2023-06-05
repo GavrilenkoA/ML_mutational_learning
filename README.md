@@ -100,9 +100,9 @@ dataset.py Pytorch datasets:
 
 **Notebooks:**
 
-*clas_ML.ipynb* - EDA, train boosting classifiers for antibody escape prediction
+*clas_ML.ipynb* - EDA, train boosting classifiers for antibody escape prediction by REGN33
 
-*DL_full_df.ipynb* - train neural networks with full data of RBD variants.
+*DL_full_df.ipynb* - train neural networks with full data of REGN33 data.
 
 *limit_data.ipynb* - train neural networks with limited data of REGN33 data
 

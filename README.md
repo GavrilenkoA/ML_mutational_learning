@@ -112,7 +112,9 @@ dataset.py Pytorch datasets:
 
 **Results:**
 
-Training RNN model consists of two stages - pre-training using background antibododies and fine tuning for prediction of REGN33 antibody escape.
+Training RNN model consists of two stages:
+1. pre-training using background antibododies
+2. fine tuning for prediction of REGN33 antibody escape.
 
 RNN model performance on combined data.
 ![image](https://github.com/GavrilenkoA/ML_mutational_learning/assets/92908421/1c1f9f0c-88a4-49bd-a487-cda800ec3bb2)

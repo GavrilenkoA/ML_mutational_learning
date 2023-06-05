@@ -12,7 +12,7 @@ In this part of project I implemented fine-tuning approach adding a feature to t
 
 **Install** **Requirements:**
 
-create and activate a virtual environment
+Create and activate a virtual environment
 
 ```bash
 pip install -r requirements.txt

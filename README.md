@@ -70,7 +70,7 @@ __process_data.py:__
 
 __training_nn.py:__
 
-[!notebooks/clas_ML.ipynb] - trained RNN with embedded antibody data
+[Link to code file](./utils/training.py) - trained RNN with embedded antibody data
 
 *training* - Trained models are used with pre-embedded data
 

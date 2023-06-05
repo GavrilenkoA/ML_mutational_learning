@@ -114,7 +114,7 @@ Then I provided 40 experiments, sampling different random 100 RBD sequences neut
 
 It can be seen, the fine-tuned model demonstrates more accurate and stable predictions.
 
-Our group tried other machine learning methods too. The results and code can be found here https://github.com/grigorievaekaterina/BI_antibodies_project/tree/main
+Our group tried other machine learning methods too. The results and code can be found here [repo](https://github.com/grigorievaekaterina/BI_antibodies_project/tree/main)
 
 #### Conclusion: 
 Therapeutic antibodies share similar features - they target the conserved epitopes on RBD and mutations in the same manner reflected by binding RBD.

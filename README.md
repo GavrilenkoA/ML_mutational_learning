@@ -62,47 +62,16 @@ phys_test: [https://disk.yandex.ru/d/hXVJLFn4iyWztw](https://disk.yandex.ru/d/hX
 
 **Utils module**
 
-__process_data.py:__
 
-*get_desc* - function for converting string to float of one-hot and phisycal features
+[process_data.py](./utils/process_data.py) functions for processing data
 
-*get_data*  - Limited data sample of the antibody of interest and full data background antibodies
+[training_nn.py](./utils/training_nn.py) functions for training neural network models
 
+[evaluation.py](./utils/evaluation.py) functions for testing neural network models
 
+[models.py](./utils/models.py) classes of architectures neural network models
 
-[training_nn.py](./utils/training_nn.py) - trained RNN with embedded antibody data
-
-*training* - Trained models are used with pre-embedded data
-
-__evaluation.py:__
-
-*plot_loss* - print plot validation and training loss
-
-*measure_metrics* - calculate all classification metrics
-
-*evaluate_model*  - calculates model metrics on embedded antibody test data
-
-*evaluate_model_rnn*  - calculates model metrics on pre-embedded antibody test data
-
-__models.py:__
-
-*CNN* - 1d convolution neural network process sequential data 
-
-*RNN* - recurrent neural network process already embedded sequence
-
-*RNNembed* - recurrent neural that generate embedding of type antibody or ACE2 protein and process RBD sequence
-
-__dataset.py Pytorch datasets:__
-
-*Onehot* - one-hot encoded RBD sequence dataset
-
-*OnehotandAB* -  dataset contains a one-hot encoded RBD sequence and the flagged type of antibody
-
-*Phys* - dataset represents the physical and one-hot features of the RBD sequence.
-
-*Abencode1* - dataset generates a special vector for antibody types.
-
-*Abencode2* - dataset generates a special number for each antibody type.
+[dataset.py](./utils/dataset.py) classes of Pytorch datasets
 
 **Notebooks:**
 

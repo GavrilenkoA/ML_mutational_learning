@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 **Additional data** 
 
-Load datasets of RBD sequences with physical features
+Load datasets of RBD sequences with physical features.
 
 In a root directory:
 
@@ -34,7 +34,7 @@ In a root directory:
 mv dataset
 ```
 
-click to link and download two files:
+click to the links and download two files:
 
 phys_train: [https://disk.yandex.ru/d/PlJgrISLlixYzA](https://disk.yandex.ru/d/PlJgrISLlixYzA)
 

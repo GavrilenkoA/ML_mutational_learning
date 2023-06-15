@@ -28,13 +28,13 @@ pip install -r requirements.txt
 
 Load datasets of RBD sequences with physical features.
 
-In a root directory:
+1. In a root directory:
 
 ```bash
 mv dataset
 ```
 
-Click to the links and download two files:
+2. Click to the links and download two files:
 
 phys_train: [https://disk.yandex.ru/d/PlJgrISLlixYzA](https://disk.yandex.ru/d/PlJgrISLlixYzA)
 

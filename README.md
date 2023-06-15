@@ -35,9 +35,10 @@ mv dataset
  ```
 
 2. Click to the links and download two files:
-  phys_train: [https://disk.yandex.ru/d/PlJgrISLlixYzA](https://disk.yandex.ru/d/PlJgrISLlixYzA)
 
-  phys_test: [https://disk.yandex.ru/d/hXVJLFn4iyWztw](https://disk.yandex.ru/d/hXVJLFn4iyWztw)
+   phys_train: [https://disk.yandex.ru/d/PlJgrISLlixYzA](https://disk.yandex.ru/d/PlJgrISLlixYzA)
+
+   phys_test: [https://disk.yandex.ru/d/hXVJLFn4iyWztw](https://disk.yandex.ru/d/hXVJLFn4iyWztw)
 
 **Data description:**
 

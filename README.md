@@ -1,4 +1,4 @@
-### Antibody escape prediction of mutated SARS-CoV-2 variants.
+### Antibody escape prediction of mutated SARS-CoV-2 variants
 Authors:
 
 Alexander Gavrilenko
